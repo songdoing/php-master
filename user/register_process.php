@@ -5,6 +5,8 @@ $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL,FILTER_SANITIZE
 $password = filter_input(INPUT_POST, 'password');
 $token = filter_input(INPUT_POST, 'token');
 
+console.log($email);
+
 if($email && $password && hash_equals($token, $_SESSION['CSRF_TOKEN'])) {
     $username = current(explode('@', $email));
     $password = password_hash($password, PASSWORD_DEFAULT);
@@ -21,5 +23,6 @@ if($email && $password && hash_equals($token, $_SESSION['CSRF_TOKEN'])) {
     }else {
         return header('Location : /blog/user/register.php');
     }
+    mysqli_stmt_close($stmt);
 }
 return header('Location : /blog/user/register.php');

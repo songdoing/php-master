@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans+KR:400,500&display=swap&subset=korean">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css" />
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="/blog/app.css">
 </head>
 <body>
     <div id="app">
